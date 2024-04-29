@@ -1,10 +1,9 @@
 import React from 'react'
+import App from '../App copy'
 
 const AboutUs = () => {
   return (
-    <div>
-    About Us
-    </div>
+   <App/>
   )
 }
 
