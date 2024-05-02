@@ -3,7 +3,7 @@ import React from 'react'
 const Animals = () => {
   return (
     <div>
-      Animals
+      Animals List 
     </div>
   )
 }

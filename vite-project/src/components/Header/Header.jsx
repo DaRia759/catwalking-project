@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 // import { AboutUs, Animals, FAQ, HomePage } from './pages';
 import { Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 const items = [
   {
     label: 'Home',
-    key: 'home',
+    key: '/',
     icon: <MailOutlined />,
   },
   {
     label: 'About Us',
-    key: 'information',
+    key: '/about',
     icon: <AppstoreOutlined />,
   },
   {
     label: 'Animals',
-    key: 'SubMenu',
+    key: '/animals',
     icon: <SettingOutlined />,
     children: [
       {
@@ -58,26 +60,20 @@ const items = [
     },
   {
     label: 'Donate',
-    key: 'donation',
+    key: '/donation',
     icon: <AppstoreOutlined />,
     },
   {
     label: 'Contact Us',
-    key: 'contact',
+    key: '/contacts',
     icon: <AppstoreOutlined />,
-  },
-  {
-    label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        FAQ
-      </a>
-    ),
-    key: 'alipay',
   },
 ];
 const Navigation = () => {
-  const [current, setCurrent] = useState('mail');
-  const onClick = (e) => {
+    const [current, setCurrent] = useState('mail');
+    const navigate = useNavigate();
+    const onClick = (e) => {
+    navigate(e.key)
     console.log('click ', e);
     setCurrent(e.key);
   };
