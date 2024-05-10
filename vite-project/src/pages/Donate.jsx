@@ -1,10 +1,10 @@
-import React from 'react'
+import Navigation from '../components/Header/Header'
 
 
 const Donation = () => {
   return (
       <div>
-          donate
+          <Navigation />
    </div>
   )
 }

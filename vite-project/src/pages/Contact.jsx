@@ -1,10 +1,9 @@
-import React from 'react'
-import App from '../App copy'
+import Navigation from '../components/Header/Header'
 
 const ContactUs = () => {
   return (
       <div>
-          'Contact'
+          <Navigation />
    </div>
   )
 }
