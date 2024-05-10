@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import clsx from 'clsx';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
 };
+
 const AppBar = () => {
     return (
-        <header>
+        <header className="css.header">
             <nav>
                 <NavLink to='/' className={buildLinkClass}>
                     Home Page
@@ -26,7 +28,7 @@ const AppBar = () => {
                     FAQ
                 </NavLink>
             </nav>
-    </header>
-)
-}
+        </header>
+    );
+};
 export default AppBar;
