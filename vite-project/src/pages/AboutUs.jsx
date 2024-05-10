@@ -1,10 +1,9 @@
-import React from 'react'
-import App from '../App copy'
+import Navigation from '../components/Header/Header'
 
 const AboutUs = () => {
   return (
     <div>
-      About us
+      <Navigation />
    </div>
   )
 }

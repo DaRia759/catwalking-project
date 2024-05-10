@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 // import { AboutUs, Animals, FAQ, HomePage } from './pages';
 import { Menu } from 'antd';
@@ -70,13 +70,12 @@ const items = [
   },
 ];
 const Navigation = () => {
-    const [current, setCurrent] = useState('mail');
+    const [current, setCurrent] = useState(window.location.pathname);
     const navigate = useNavigate();
     const onClick = (e) => {
     navigate(e.key)
-    console.log('click ', e);
     setCurrent(e.key);
   };
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return <Menu className='header' onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
 };
 export default Navigation;

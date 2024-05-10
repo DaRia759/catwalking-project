@@ -1,9 +1,9 @@
-import React from 'react'
+import Navigation from '../components/Header/Header'
 
 const FAQ = () => {
   return (
     <div>
-      FAQ
+      <Navigation />
     </div>
   )
 }

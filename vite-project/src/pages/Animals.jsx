@@ -1,9 +1,9 @@
-import React from 'react'
+import Navigation from '../components/Header/Header'
 
 const Animals = () => {
   return (
     <div>
-      Animals List 
+      <Navigation />
     </div>
   )
 }
